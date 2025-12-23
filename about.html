@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/Geospear_with%20Background.jpg">
+    <title>About - Geo-Spear Ltd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ast-global-color-0: #ebd35b;
+            --ast-global-color-1: #e3bd2c;
+            --ast-global-color-2: #183030;
+            --ast-global-color-3: #526354;
+            --ast-global-color-4: #f3faf6;
+            --ast-global-color-5: #FFFFFF;
+            --ast-global-color-6: #dfe2e2;
+            --ast-global-color-7: #183030;
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.65;
+            color: var(--ast-global-color-3);
+            background-color: var(--ast-global-color-4);
+        }
+
+        a {
+            color: var(--ast-global-color-0);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--ast-global-color-1);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 600;
+            color: var(--ast-global-color-2);
+        }
+
+        h1 {
+            font-size: 74px;
+            line-height: 1.1em;
+            letter-spacing: -2px;
+        }
+
+        h2 {
+            font-size: 54px;
+            line-height: 1.2em;
+            letter-spacing: -2px;
+        }
+
+        h3 {
+            font-size: 42px;
+            line-height: 1.3em;
+        }
+
+        h4 {
+            font-size: 32px;
+            line-height: 1.2em;
+        }
+
+        h5 {
+            font-size: 24px;
+            line-height: 1.2em;
+        }
+
+        h6 {
+            font-size: 18px;
+            line-height: 1.25em;
+        }
+
+        .site-header {
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: rgba(24, 48, 48, 0.18);
+            z-index: 99;
+        }
+
+        .main-header-bar {
+            border-bottom: 1px solid transparent;
+        }
+
+        .site-header-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .site-logo-img img {
+            width: 200px;
+            height: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .main-navigation {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-header-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-header-menu a {
+            color: var(--ast-global-color-5);
+            font-family: 'Karla', sans-serif;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .main-header-menu a:hover,
+        .main-header-menu .current-menu-item a {
+            color: var(--ast-global-color-4);
+        }
+
+        .ast-custom-button {
+            background-color: var(--ast-global-color-0);
+            color: var(--ast-global-color-2);
+            padding: 15px 30px;
+            border-radius: 40px;
+            border: 2px solid var(--ast-global-color-0);
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.3em;
+            letter-spacing: -0.5px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .ast-custom-button:hover {
+            background-color: var(--ast-global-color-1);
+            border-color: var(--ast-global-color-1);
+            color: var(--ast-global-color-2);
+        }
+
+        .site-content {
+            flex-grow: 1;
+        }
+
+        .elementor {
+            width: 100%;
+        }
+
+        .e-con {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .e-con-boxed .e-con-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3em;
+        }
+
+        /* Hero Section */
+        .elementor-element-5ef7019 {
+            background-color: var(--ast-global-color-4);
+            text-align: center;
+            padding: 150px 3em 80px;
+        }
+
+        .elementor-element-5ef7019 h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Our Story Section */
+        .elementor-element-44b6349 .e-con-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 80px 40px;
+        }
+
+        .elementor-icon-box-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .elementor-icon {
+            color: var(--ast-global-color-0);
+            font-size: 24px;
+        }
+
+        .elementor-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .elementor-icon-box-title {
+            color: var(--ast-global-color-0);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        /* Stats Section */
+        .elementor-element-7dd9593 {
+            background-color: var(--ast-global-color-0);
+            padding: 60px 40px;
+        }
+
+        .elementor-element-10b297c {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .elementor-element-10b297c > div {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .elementor-element-10b297c h2 {
+            font-size: 72px;
+            color: var(--ast-global-color-2);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .elementor-element-10b297c p {
+            color: var(--ast-global-color-2);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Process Section */
+        .elementor-element-8ab98d8 {
+            background-color: var(--ast-global-color-5);
+            padding: 80px 40px;
+        }
+
+        .elementor-element-e6740cb {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .elementor-element-e6740cb .elementor-icon-box-wrapper {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        .elementor-element-e6740cb .elementor-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .elementor-element-e6740cb h4 {
+            margin-bottom: 15px;
+            color: var(--ast-global-color-2);
+        }
+
+        /* Mission Vision Section */
+        .elementor-element-907eebe .e-con-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 80px 40px;
+        }
+
+        .elementor-widget-divider {
+            margin: 40px 0;
+        }
+
+        .elementor-divider-separator {
+            display: block;
+            border-top: 2px solid var(--ast-global-color-6);
+        }
+
+        /* Team Section */
+        .elementor-element-095ae6c {
+            background-color: var(--ast-global-color-5);
+            padding: 80px 40px;
+        }
+
+        .elementor-element-0e94e76 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .elementor-element-0e94e76 > div {
+            text-align: center;
+        }
+
+        .elementor-element-0e94e76 img {
+            margin-bottom: 20px;
+        }
+
+        .elementor-element-0e94e76 h5 {
+            margin-bottom: 10px;
+        }
+
+        .elementor-element-0e94e76 p {
+            color: var(--ast-global-color-3);
+            margin-bottom: 15px;
+        }
+
+        .elementor-icon a {
+            color: var(--ast-global-color-0);
+            font-size: 20px;
+        }
+
+        /* Community Section */
+        .elementor-element-892fc5f .e-con-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 80px 40px;
+        }
+
+        /* CTA Section */
+        .elementor-element-5426fa9 {
+            background-color: var(--ast-global-color-0);
+            text-align: center;
+            padding: 80px 40px;
+        }
+
+        .elementor-element-5426fa9 h2 {
+            margin-bottom: 20px;
+        }
+
+        .elementor-element-5426fa9 p {
+            margin-bottom: 30px;
+            color: var(--ast-global-color-2);
+        }
+
+        .elementor-button {
+            background-color: var(--ast-global-color-2);
+            color: var(--ast-global-color-5);
+            padding: 15px 30px;
+            border-radius: 40px;
+            border: 2px solid var(--ast-global-color-2);
+            font-weight: 700;
+            font-size: 18px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .elementor-button:hover {
+            background-color: transparent;
+            color: var(--ast-global-color-2);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--ast-global-color-4);
+        }
+
+        .site-primary-footer-wrap {
+            border-top: 1px solid var(--ast-global-color-6);
+            padding: 80px 40px;
+        }
+
+        .site-primary-footer-inner-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .footer-widget-area h5 {
+            margin-bottom: 20px;
+            color: var(--ast-global-color-2);
+        }
+
+        .footer-widget-area ul {
+            list-style: none;
+        }
+
+        .footer-widget-area li {
+            margin-bottom: 10px;
+        }
+
+        .footer-widget-area a {
+            color: var(--ast-global-color-2);
+        }
+
+        .footer-widget-area a:hover {
+            color: var(--ast-global-color-1);
+        }
+
+        .footer-widget-area p {
+            color: var(--ast-global-color-3);
+        }
+
+        .site-below-footer-wrap {
+            border-top: 1px solid var(--ast-global-color-6);
+            padding: 20px 40px;
+            background-color: var(--ast-global-color-4);
+        }
+
+        .ast-footer-copyright {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--ast-global-color-3);
+            font-size: 16px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--ast-global-color-0);
+            color: var(--ast-global-color-0);
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            h1 { font-size: 48px; }
+            h2 { font-size: 32px; }
+            h3 { font-size: 26px; }
+            h4 { font-size: 22px; }
+            h5 { font-size: 20px; }
+
+            .site-header-wrap {
+                padding: 0 32px;
+                min-height: 70px;
+            }
+
+            .elementor-element-44b6349 .e-con-inner,
+            .elementor-element-907eebe .e-con-inner,
+            .elementor-element-892fc5f .e-con-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 32px;
+            }
+
+            .elementor-element-10b297c,
+            .elementor-element-e6740cb,
+            .elementor-element-0e94e76 {
+                grid-template-columns: 1fr;
+            }
+
+            .site-primary-footer-inner-wrap {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main-navigation {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+            h3 { font-size: 22px; }
+            h4 { font-size: 20px; }
+            h5 { font-size: 18px; }
+
+            .site-header-wrap {
+                padding: 0 24px;
+                min-height: 64px;
+            }
+
+            .site-logo-img img {
+                width: 120px;
+            }
+
+            .e-con-boxed .e-con-inner {
+                padding: 1.5em;
+            }
+
+            .elementor-element-5ef7019 {
+                padding: 100px 1.5em 60px;
+            }
+
+            .elementor-element-44b6349 .e-con-inner,
+            .elementor-element-907eebe .e-con-inner,
+            .elementor-element-892fc5f .e-con-inner {
+                padding: 50px 24px;
+            }
+
+            .elementor-element-10b297c h2 {
+                font-size: 48px;
+            }
+
+            .site-primary-footer-wrap {
+                padding: 50px 24px 10px;
+            }
+
+            .site-primary-footer-inner-wrap {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .site-below-footer-wrap {
+                padding: 20px 24px;
+            }
+        }
+    </style>
+</head>
+<body class="page-template-default page wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar ast-replace-site-logo-transparent ast-theme-transparent-header">
+
+<header class="site-header" id="masthead">
+    <div id="ast-desktop-header">
+        <div class="main-header-bar">
+            <div class="site-header-wrap ast-container">
+                <div class="site-branding">
+                    <span class="site-logo-img">
+                        <a href="/" rel="home">
+                            <img src="img/GeoSpears%20Logo_No%20back%20ground.png" alt="Geospear">
+                        </a>
+                    </span>
+                </div>
+
+                <nav class="main-navigation" id="primary-site-navigation-desktop">
+                    <ul class="main-header-menu">
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item current-menu-item"><a href="#about/">About</a></li>
+                        <li class="menu-item"><a href="404.html">Services</a></li>
+                        <li class="menu-item"><a href="404.html">Projects</a></li>
+                        <li class="menu-item"><a href="404.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="ast-header-button">
+                    <a href="#" class="ast-custom-button">Partner with Us</a>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span>☰</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="content" class="site-content">
+    <div class="ast-container">
+        <div id="primary" class="content-area primary">
+            <main id="main" class="site-main">
+                <article class="page">
+                    <div class="entry-content">
+                        <div class="elementor elementor-16">
+
+                            <!-- Hero Section -->
+                            <section class="elementor-element elementor-element-5ef7019 e-con">
+                                <div>
+                                    <h1>Welcome to Earthly Elegance</h1>
+                                    <p>From Innovative Design to Meticulous Maintenance, We Deliver Exceptional Results Tailored to your vision.</p>
+                                </div>
+                            </section>
+
+                            <!-- Our Story Section -->
+                            <section class="elementor-element elementor-element-44b6349 e-con">
+                                <div class="e-con-inner">
+                                    <div>
+                                        <div class="elementor-icon-box-wrapper">
+                                            <span class="elementor-icon">
+                                                <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"></path>
+                                                </svg>
+                                            </span>
+                                            <p class="elementor-icon-box-title">Our Story</p>
+                                        </div>
+                                        <h2>Crafting Gardens & Landscapes with Expertise and Care</h2>
+                                        <p>Founded in 2021 by James White, Earthly Elegance began as a small family business with a vision to bring high-quality landscaping to the community. Over the years, we've grown into a team of dedicated professionals who share a common goal: to provide exceptional service and innovative design solutions.</p>
+                                    </div>
+                                    <div>
+                                        <img src="https://websitedemos.net/gardening-and-landscape-02/wp-content/uploads/sites/1520/2025/03/our-story.jpg" alt="Our Story">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Stats Section -->
+                            <section class="elementor-element elementor-element-7dd9593 e-con">
+                                <div class="e-con-inner">
+                                    <div class="elementor-element-10b297c">
+                                        <div>
+                                            <h2>15</h2>
+                                            <p>Years of experience</p>
+                                        </div>
+                                        <div>
+                                            <h2>36K</h2>
+                                            <p>Satisfied clients around the USA</p>
+                                        </div>
+                                        <div>
+                                            <h2>642</h2>
+                                            <p>Project completed in 12 States</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Process Section -->
+                            <section class="elementor-element elementor-element-8ab98d8 e-con">
+                                <div class="e-con-inner">
+                                    <div class="elementor-icon-box-wrapper">
+                                        <span class="elementor-icon">
+                                            <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="elementor-icon-box-title">Our Process</p>
+                                    </div>
+                                    <h2>Steps to Your Dream Outdoor Space</h2>
+                                    <div class="elementor-element-e6740cb">
+                                        <div>
+                                            <div class="elementor-icon-box-wrapper">
+                                                <span class="elementor-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                                                        <path d="M248 129.078125l58.894531-49.078125h77.105469v-80h-192v80h56zm-40-65.078125v-48h160v48h-66.894531l-37.105469 30.921875v-30.921875zm0 0"></path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <h4>1. Consult</h4>
+                                            <p>We begin with a personalized consultation to capture your vision and needs.</p>
+                                        </div>
+                                        <div>
+                                            <div class="elementor-icon-box-wrapper">
+                                                <span class="elementor-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                                                        <path d="M248 129.078125l58.894531-49.078125h77.105469v-80h-192v80h56zm-40-65.078125v-48h160v48h-66.894531l-37.105469 30.921875v-30.921875zm0 0"></path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <h4>2. Design</h4>
+                                            <p>Our experts craft a detailed plan with eco-friendly practices for your approval.</p>
+                                        </div>
+                                        <div>
+                                            <div class="elementor-icon-box-wrapper">
+                                                <span class="elementor-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                                                        <path d="M248 129.078125l58.894531-49.078125h77.105469v-80h-192v80h56zm-40-65.078125v-48h160v48h-66.894531l-37.105469 30.921875v-30.921875zm0 0"></path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <h4>3. Execute</h4>
+                                            <p>Our skilled team transforms your space with precision and care.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Mission Vision Section -->
+                            <section class="elementor-element elementor-element-907eebe e-con">
+                                <div class="e-con-inner">
+                                    <div>
+                                        <img src="https://websitedemos.net/gardening-and-landscape-02/wp-content/uploads/sites/1520/2025/03/mission-vission.jpg" alt="Mission Vision">
+                                    </div>
+                                    <div>
+                                        <div class="elementor-icon-box-wrapper">
+                                            <span class="elementor-icon">
+                                                <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"></path>
+                                                </svg>
+                                            </span>
+                                            <p class="elementor-icon-box-title">The Goal</p>
+                                        </div>
+                                        <h2>Our Mission</h2>
+                                        <p>To transform outdoor spaces into beautiful, functional, and sustainable environments that enhance our clients' lifestyles while respecting the natural world. We are committed to delivering exceptional service and innovative solutions through our passion for gardening and landscaping.</p>
+
+                                        <div class="elementor-widget-divider">
+                                            <span class="elementor-divider-separator"></span>
+                                        </div>
+
+                                        <div class="elementor-icon-box-wrapper">
+                                            <span class="elementor-icon">
+                                                <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"></path>
+                                                </svg>
+                                            </span>
+                                            <p class="elementor-icon-box-title">The Outlook</p>
+                                        </div>
+
+</div>
+
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+</div>
+</body>

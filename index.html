@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/Geospear_with%20Background.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Geo-Spear Ltd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ast-global-color-0: #ebd35b;
+            --ast-global-color-1: #e3bd2c;
+            --ast-global-color-2: #183030;
+            --ast-global-color-3: #526354;
+            --ast-global-color-4: #f3faf6;
+            --ast-global-color-5: #FFFFFF;
+            --ast-global-color-6: #dfe2e2;
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            color: var(--ast-global-color-3);
+            background-color: var(--ast-global-color-4);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 600;
+            color: var(--ast-global-color-2);
+        }
+
+        h1 {
+            font-size: 74px;
+            line-height: 1.1em;
+            letter-spacing: -2px;
+        }
+
+        h2 {
+            font-size: 54px;
+            line-height: 1.2em;
+            letter-spacing: -2px;
+        }
+
+        h3 {
+            font-size: 42px;
+            line-height: 1.3em;
+        }
+
+        h5 {
+            font-size: 24px;
+            line-height: 1.2em;
+        }
+
+        /* Header */
+        .site-header {
+            background: rgba(24, 48, 48, 0.18);
+            position: absolute;
+            width: 100%;
+            z-index: 90;
+            border-bottom: 1px solid transparent;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            min-height: 80px;
+        }
+
+        .site-logo img {
+            height: 50px;
+            width: 100px;
+        }
+
+        .main-navigation ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .main-navigation a {
+            color: var(--ast-global-color-5);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .main-navigation a:hover {
+            color: var(--ast-global-color-4);
+        }
+
+        .header-button {
+            background: var(--ast-global-color-0);
+            color: var(--ast-global-color-2);
+            padding: 15px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border: 2px solid var(--ast-global-color-0);
+            transition: all 0.3s;
+        }
+
+        .header-button:hover {
+            background: var(--ast-global-color-1);
+            border-color: var(--ast-global-color-1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/hero1.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 150px 20px 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-section h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border: 2px solid;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--ast-global-color-0);
+            color: var(--ast-global-color-2);
+            border-color: var(--ast-global-color-0);
+        }
+
+        .btn-primary:hover {
+            background: var(--ast-global-color-1);
+            border-color: var(--ast-global-color-1);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--ast-global-color-2);
+        }
+
+        /* Features Section */
+        .features-section {
+            background: var(--ast-global-color-5);
+            padding: 80px 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--ast-global-color-0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 40px;
+            background: var(--ast-global-color-4);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .about-images img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .about-content h5 {
+            color: var(--ast-global-color-0);
+            margin-bottom: 15px;
+        }
+
+        .about-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 25px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .check-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .check-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--ast-global-color-0);
+            font-weight: bold;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 40px;
+            background: var(--ast-global-color-5);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h5 {
+            color: var(--ast-global-color-0);
+            margin-bottom: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--ast-global-color-4);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h5 {
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--ast-global-color-4);
+            padding: 80px 40px 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-widget h5 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-widget ul {
+            list-style: none;
+        }
+
+        .footer-widget ul li {
+            padding: 8px 0;
+        }
+
+        .footer-widget a {
+            color: var(--ast-global-color-2);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-widget a:hover {
+            color: var(--ast-global-color-1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid var(--ast-global-color-6);
+            color: var(--ast-global-color-3);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            h1 { font-size: 48px; }
+            h2 { font-size: 32px; }
+            h3 { font-size: 26px; }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-navigation {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+
+            .header-container {
+                padding: 20px;
+            }
+
+            .hero-section {
+                padding: 120px 20px 60px;
+            }
+
+            .features-section,
+            .about-section,
+            .services-section,
+            .site-footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="site-logo">
+                <img src="img/GeoSpears Logo_No back ground.png" alt="GeoSpears">
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="404.html">About</a></li>
+                    <li><a href="404.html">Services</a></li>
+                    <li><a href="404.html">Projects</a></li>
+                    <li><a href="404.html">Contact</a></li>
+
+                </ul>
+            </nav>
+            <a href="#quote" class="header-button">Partner With Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1>Empowering Communities with Geospatial Intelligence</h1>
+            <p>Data-driven solutions using AI, GIS, and remote sensing for agriculture, climate resilience, and sustainable development.</p>
+            <div class="button-group">
+                <a href="#quote" class="btn btn-primary">Request a Consultation</a>
+                <a href="#contact" class="btn btn-secondary">Talk to Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">$</div>
+                    <h5>Cost-Effective Solutions</h5>
+                    <p>High-impact geospatial and AI solutions delivered using open-source tools to keep costs affordable.</p></p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🌱</div>
+                    <h5>Sustainable & Climate-Smart</h5>
+                    <p>Solutions designed to enhance climate resilience, sustainable agriculture, and environmental protection.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🤝</div>
+                    <h5>Community & Client Focused</h5>
+                    <p>We work closely with farmers, NGOs, and governments to deliver practical, locally relevant insights.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🔬</div>
+                    <h5>Agricultural Research & Analytics</h5>
+                    <p>Advanced geospatial, climate, and AI-driven analytics supporting crop research, trials, and evidence-based agricultural studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <img src="img/about.jpg" alt="about">
+                    <img src="img/about2.png" alt="about2">
+                </div>
+                <div class="about-content">
+                    <h5>About us</h5>
+                    <h2>Transforming Decisions with Geospatial Intelligence</h2>
+                    <p>Geospatial Spear Ltd is a data-driven geospatial and AI innovation company empowering agriculture, research, and development sectors with actionable spatial insights. We combine GIS, remote sensing, and artificial intelligence to support climate resilience, sustainable agriculture, and evidence-based decision-making.</p>
+                    <ul class="check-list">
+                        <li>AI-Powered Smart Agriculture Solutions</li>
+                        <li>Geospatial Research & Analytics</li>
+                        <li>Climate & Environmental Monitoring</li>
+                    </ul>
+                    <a href="#learn-more" class="btn btn-primary">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h5>Our Services</h5>
+                <h2>Geospatial, AI & Data-Driven Solutions for Sustainable Development</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="img/rs.png" alt="GIS">
+                    <div class="service-content">
+                        <h5>Geospatial Analytics & Remote Sensing</h5>
+                        <p>Advanced GIS, satellite imagery, and AI-powered analysis for agriculture, climate, and land management.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="img/ai.png" alt="AI">
+                    <div class="service-content">
+                        <h5>AI-Driven Agriculture Solutions</h5>
+                        <p>Crop health monitoring, yield prediction, and early pest detection to support climate-smart farming.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="img/Mapping.jpg" alt="Landscape Architecture">
+                    <div class="service-content">
+                        <h5>Training, Mapping & Open Data</h5>
+                        <p>Capacity building, OpenStreetMap projects, and community-driven mapping for inclusive development.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#services" class="btn btn-primary">Explore Our Services →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-widget">
+                <img src="img/GeoSpears%20Logo_No%20back%20ground.png" alt="Geospatial Spear Ltd" style="height: 32px; margin-bottom: 20px;">
+                <p>Empowering communities through spatial intelligence and data-driven development solutions.</p>
+            </div>
+            <div class="footer-widget">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#">Geospatial Analytics & GIS</a></li>
+                    <li><a href="#">Remote Sensing & Climate Analysis</a></li>
+                    <li><a href="#">AI-Driven Agriculture Tools</a></li>
+                    <li><a href="#">Training & Capacity Building</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h5>Contact Information</h5>
+                <p>Nairobi, Kenya<br></p>
+                <p><strong>Email</strong>: gi4d.co@gmail.com</p>
+              <div style="text-align: center; margin: 20px 0;" class="social-icons">
+  <a href="https://www.twitter.com/GeoSpear_LTD" target="_blank"
+     style="margin: 0 10px; color: #333; font-size: 30px; text-decoration: none;"
+     onmouseover="this.style.color='#1DA1F2';"
+     onmouseout="this.style.color='#333';">
+    <i class="fab fa-twitter"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/company/geospears-ltd" target="_blank"
+     style="margin: 0 10px; color: #333; font-size: 30px; text-decoration: none;"
+     onmouseover="this.style.color='#0077b5';"
+     onmouseout="this.style.color='#333';">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="footer-bottom">
+            <p>Copyright © 2026 Geospatial Spear Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
