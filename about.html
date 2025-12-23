@@ -103,8 +103,8 @@
         }
 
         .site-logo-img img {
-            width: 200px;
-            height: auto;
+            width: 100px;
+            height: 50px;
             filter: brightness(0) invert(1);
         }
 
@@ -174,6 +174,7 @@
 
         /* Hero Section */
         .elementor-element-5ef7019 {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/welcome.png');
             background-color: var(--ast-global-color-4);
             text-align: center;
             padding: 150px 3em 80px;
@@ -380,61 +381,47 @@
 
         /* Footer */
         .site-footer {
-            background-color: var(--ast-global-color-4);
+            background: var(--ast-global-color-4);
+            padding: 80px 40px 20px;
         }
 
-        .site-primary-footer-wrap {
-            border-top: 1px solid var(--ast-global-color-6);
-            padding: 80px 40px;
-        }
-
-        .site-primary-footer-inner-wrap {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
         }
 
-        .footer-widget-area h5 {
+        .footer-widget h5 {
             margin-bottom: 20px;
-            color: var(--ast-global-color-2);
+            font-size: 20px;
         }
 
-        .footer-widget-area ul {
+        .footer-widget ul {
             list-style: none;
         }
 
-        .footer-widget-area li {
-            margin-bottom: 10px;
+        .footer-widget ul li {
+            padding: 8px 0;
         }
 
-        .footer-widget-area a {
+        .footer-widget a {
             color: var(--ast-global-color-2);
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .footer-widget-area a:hover {
+        .footer-widget a:hover {
             color: var(--ast-global-color-1);
         }
 
-        .footer-widget-area p {
-            color: var(--ast-global-color-3);
-        }
-
-        .site-below-footer-wrap {
-            border-top: 1px solid var(--ast-global-color-6);
-            padding: 20px 40px;
-            background-color: var(--ast-global-color-4);
-        }
-
-        .ast-footer-copyright {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-bottom {
             text-align: center;
+            padding: 20px;
+            border-top: 1px solid var(--ast-global-color-6);
             color: var(--ast-global-color-3);
-            font-size: 16px;
         }
-
         /* Mobile Menu */
         .mobile-menu-toggle {
             display: none;
@@ -552,10 +539,10 @@
                 <nav class="main-navigation" id="primary-site-navigation-desktop">
                     <ul class="main-header-menu">
                         <li class="menu-item"><a href="index.html">Home</a></li>
-                        <li class="menu-item current-menu-item"><a href="#about/">About</a></li>
-                        <li class="menu-item"><a href="404.html">Services</a></li>
+                        <li class="menu-item current-menu-item"><a href="about.html">About</a></li>
+                        <li class="menu-item"><a href="services.html">Services</a></li>
                         <li class="menu-item"><a href="404.html">Projects</a></li>
-                        <li class="menu-item"><a href="404.html">Contact</a></li>
+                        <li class="menu-item"><a href="contacts.html">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -582,8 +569,8 @@
                             <!-- Hero Section -->
                             <section class="elementor-element elementor-element-5ef7019 e-con">
                                 <div>
-                                    <h1>Welcome to Earthly Elegance</h1>
-                                    <p>From Innovative Design to Meticulous Maintenance, We Deliver Exceptional Results Tailored to your vision.</p>
+                                    <h1>Welcome to Geo-Spear Ltd</h1>
+                                    <p>From geospatial innovation to data-driven implementation, we deliver precise, sustainable solutions tailored to your vision.</p>
                                 </div>
                             </section>
 
@@ -599,11 +586,14 @@
                                             </span>
                                             <p class="elementor-icon-box-title">Our Story</p>
                                         </div>
-                                        <h2>Crafting Gardens & Landscapes with Expertise and Care</h2>
-                                        <p>Founded in 2021 by James White, Earthly Elegance began as a small family business with a vision to bring high-quality landscaping to the community. Over the years, we've grown into a team of dedicated professionals who share a common goal: to provide exceptional service and innovative design solutions.</p>
+                                        <h2>Delivering Geospatial Innovation with Precision and Purpose</h2>
+                                        <p>Founded in 2023, Geospatial Spear LTD is a youth-driven geospatial technology
+                                          company committed to empowering communities and organizations through data-driven solutions.
+                                          What began as a small, innovation-focused initiative has grown into a multidisciplinary team delivering impactful
+                                          geospatial, AI, land, and environmental intelligence across Kenya and the region.</p>
                                     </div>
                                     <div>
-                                        <img src="https://websitedemos.net/gardening-and-landscape-02/wp-content/uploads/sites/1520/2025/03/our-story.jpg" alt="Our Story">
+                                        <img src="img/Precision.png" alt="Our Story">
                                     </div>
                                 </div>
                             </section>
@@ -613,16 +603,16 @@
                                 <div class="e-con-inner">
                                     <div class="elementor-element-10b297c">
                                         <div>
-                                            <h2>15</h2>
+                                            <h2>3+</h2>
                                             <p>Years of experience</p>
                                         </div>
                                         <div>
-                                            <h2>36K</h2>
-                                            <p>Satisfied clients around the USA</p>
+                                            <h2>10+</h2>
+                                            <p>Satisfied clients around the East Africa</p>
                                         </div>
                                         <div>
-                                            <h2>642</h2>
-                                            <p>Project completed in 12 States</p>
+                                            <h2>20+</h2>
+                                            <p>Project completed in East Africa</p>
                                         </div>
                                     </div>
                                 </div>
@@ -639,40 +629,22 @@
                                         </span>
                                         <p class="elementor-icon-box-title">Our Process</p>
                                     </div>
-                                    <h2>Steps to Your Dream Outdoor Space</h2>
+                                    <h2>From Data to Actionable Insight</h2>
                                     <div class="elementor-element-e6740cb">
                                         <div>
-                                            <div class="elementor-icon-box-wrapper">
-                                                <span class="elementor-icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
-                                                        <path d="M248 129.078125l58.894531-49.078125h77.105469v-80h-192v80h56zm-40-65.078125v-48h160v48h-66.894531l-37.105469 30.921875v-30.921875zm0 0"></path>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <h4>1. Consult</h4>
-                                            <p>We begin with a personalized consultation to capture your vision and needs.</p>
+
+                                            <h4>1. Consult & Scope</h4>
+                                            <p>We engage stakeholders to understand project goals, data needs, and local context.</p>
                                         </div>
                                         <div>
-                                            <div class="elementor-icon-box-wrapper">
-                                                <span class="elementor-icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
-                                                        <path d="M248 129.078125l58.894531-49.078125h77.105469v-80h-192v80h56zm-40-65.078125v-48h160v48h-66.894531l-37.105469 30.921875v-30.921875zm0 0"></path>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <h4>2. Design</h4>
-                                            <p>Our experts craft a detailed plan with eco-friendly practices for your approval.</p>
+
+                                            <h4>2. Analyze & Design</h4>
+                                            <p>We apply GIS, remote sensing, and AI techniques to design tailored, data-driven solutions.</p>
                                         </div>
                                         <div>
-                                            <div class="elementor-icon-box-wrapper">
-                                                <span class="elementor-icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
-                                                        <path d="M248 129.078125l58.894531-49.078125h77.105469v-80h-192v80h56zm-40-65.078125v-48h160v48h-66.894531l-37.105469 30.921875v-30.921875zm0 0"></path>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <h4>3. Execute</h4>
-                                            <p>Our skilled team transforms your space with precision and care.</p>
+
+                                            <h4>3. Implement & Support</h4>
+                                            <p>We deliver maps, dashboards, and systems, followed by training and ongoing technical support.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -682,37 +654,22 @@
                             <section class="elementor-element elementor-element-907eebe e-con">
                                 <div class="e-con-inner">
                                     <div>
-                                        <img src="https://websitedemos.net/gardening-and-landscape-02/wp-content/uploads/sites/1520/2025/03/mission-vission.jpg" alt="Mission Vision">
+                                        <img src="img/sdg.png" alt="Mission Vision">
                                     </div>
                                     <div>
-                                        <div class="elementor-icon-box-wrapper">
-                                            <span class="elementor-icon">
-                                                <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"></path>
-                                                </svg>
-                                            </span>
-                                            <p class="elementor-icon-box-title">The Goal</p>
-                                        </div>
+
                                         <h2>Our Mission</h2>
-                                        <p>To transform outdoor spaces into beautiful, functional, and sustainable environments that enhance our clients' lifestyles while respecting the natural world. We are committed to delivering exceptional service and innovative solutions through our passion for gardening and landscaping.</p>
+                                        <p>To empower communities and organizations with innovative geospatial, AI-driven, and data-centric solutions that support informed decision-making,
+                                          sustainable land and water management, and climate-resilient development.</p>
 
                                         <div class="elementor-widget-divider">
                                             <span class="elementor-divider-separator"></span>
                                         </div>
-
-                                        <div class="elementor-icon-box-wrapper">
-                                            <span class="elementor-icon">
-                                                <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"></path>
-                                                </svg>
-                                            </span>
-                                            <p class="elementor-icon-box-title">The Outlook</p>
-                                        </div>
-
-</div>
+                                    </div>
 
                                 </div>
                             </section>
+
                         </div>
                     </div>
                 </article>
@@ -720,4 +677,62 @@
         </div>
     </div>
 </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-widget">
+                <img src="img/GeoSpears%20Logo_No%20back%20ground.png" alt="Geospatial Spear Ltd" style="height: 32px; margin-bottom: 20px;">
+                <p>Empowering communities through spatial intelligence and data-driven development solutions.</p>
+            </div>
+            <div class="footer-widget">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="404.html">About</a></li>
+                    <li><a href="404.html">Services</a></li>
+                    <li><a href="404.html">Projects</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#">Geospatial Analytics & GIS</a></li>
+                    <li><a href="#">Remote Sensing & Climate Analysis</a></li>
+                    <li><a href="#">AI-Driven Agriculture Tools</a></li>
+                    <li><a href="#">Training & Capacity Building</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h5>Contact Information</h5>
+                <p>Nairobi, Kenya<br></p>
+                <p><strong>Email</strong>: gi4d.co@gmail.com</p>
+              <div style="text-align: center; margin: 20px 0;" class="social-icons">
+  <a href="https://www.twitter.com/GeoSpear_LTD" target="_blank"
+     style="margin: 0 10px; color: #333; font-size: 30px; text-decoration: none;"
+     onmouseover="this.style.color='#1DA1F2';"
+     onmouseout="this.style.color='#333';">
+    <i class="fab fa-twitter"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/company/geospears-ltd/?viewAsMember=true" target="_blank"
+     style="margin: 0 10px; color: #333; font-size: 30px; text-decoration: none;"
+     onmouseover="this.style.color='#0077b5';"
+     onmouseout="this.style.color='#333';">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="footer-bottom">
+            <p>Copyright © 2026 Geospatial Spear Ltd. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
