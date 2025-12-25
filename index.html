@@ -609,5 +609,22 @@
         `;
     }, 6000); // change every 6 seconds
 </script>
+<script>
+    function handleSmallAndroid() {
+        const isAndroid = /Android/i.test(navigator.userAgent);
+        const isSmallScreen = window.innerWidth <= 480;
+
+        if (isAndroid && isSmallScreen) {
+            document.body.classList.add('android-small');
+        } else {
+            document.body.classList.remove('android-small');
+        }
+    }
+
+    // Run on load and resize
+    window.addEventListener('load', handleSmallAndroid);
+    window.addEventListener('resize', handleSmallAndroid);
+</script>
+
 </body>
 </html>
