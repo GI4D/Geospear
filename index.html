@@ -83,6 +83,7 @@
         .site-logo img {
             height: 50px;
             max-width: 95px;
+            filter: brightness(0) invert(1);
         }
 
         .main-navigation ul {
@@ -121,7 +122,8 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/hero1.png');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('img/hero1.png');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -131,6 +133,7 @@
             text-align: center;
             color: white;
             padding: 150px 20px 80px;
+            transition: background-image 1s ease-in-out;
         }
 
         .hero-content {
@@ -585,5 +588,26 @@
             <p>Copyright © 2026 Geospatial Spear Ltd. All rights reserved.</p>
         </div>
     </footer>
+
+<script>
+    const heroSection = document.querySelector('.hero-section');
+
+    const images = [
+        'img/hero6.png',
+        'img/hero7.png',
+        'img/hero1.png',
+        'img/hero5.png'
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        heroSection.style.background = `
+            linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+            url('${images[index]}') center/cover no-repeat
+        `;
+    }, 6000); // change every 6 seconds
+</script>
 </body>
 </html>
