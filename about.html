@@ -738,4 +738,21 @@
             <p>Copyright © 2026 Geospatial Spear Ltd. All rights reserved.</p>
         </div>
     </footer>
+<script>
+    function handleSmallAndroid() {
+        const isAndroid = /Android/i.test(navigator.userAgent);
+        const isSmallScreen = window.innerWidth <= 480;
+
+        if (isAndroid && isSmallScreen) {
+            document.body.classList.add('android-small');
+        } else {
+            document.body.classList.remove('android-small');
+        }
+    }
+
+    // Run on load and resize
+    window.addEventListener('load', handleSmallAndroid);
+    window.addEventListener('resize', handleSmallAndroid);
+</script>
+
 </body>
