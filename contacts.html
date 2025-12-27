@@ -383,7 +383,7 @@ h5 {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 40px;
 }
 
@@ -397,9 +397,9 @@ h5 {
 }
 
 .footer-widget-area a {
-    color: var(--ast-global-color-2);
-    display: block;
-    padding: 5px 0;
+            color: var(--ast-global-color-2);
+            text-decoration: none;
+            transition: color 0.3s;
 }
 
 .footer-widget-area a:hover {
@@ -499,7 +499,7 @@ h5 {
 
                 <div class="site-header-primary-section-right">
                     <div class="ast-header-button-1">
-                        <a href="#" class="ast-custom-button">Partner With Us</a>
+                        <a href="contacts.html" class="ast-custom-button">Partner With Us</a>
                     </div>
                     <button class="mobile-menu-toggle">☰</button>
                 </div>
@@ -633,6 +633,15 @@ h5 {
                     <li><a href="contacts.html">Contact</a></li>
                 </ul>
             </div>
+            <div class="footer-widget-area">
+            <h5>Resources</h5>
+            <ul>
+                <li><a href="404.html">Blogs</a></li>
+                <li><a href="404.html">Jobs</a></li>
+                <li><a href="404.html">News & Events</a></li>
+            </ul>
+        </div>
+
 
             <div class="footer-widget-area">
                 <h5>Services</h5>
@@ -648,26 +657,27 @@ h5 {
                   <h5>Contact Information</h5>
                   <p>Nairobi, Kenya<br></p>
                   <p><strong>Email</strong>: gi4d.co@gmail.com</p>
-                      <div style="text-align: center; margin: 20px 0;" class="social-icons">
-                          <a href="https://www.twitter.com/GeoSpear_LTD" target="_blank"
-             style="margin: 0 10px; color: #333; font-size: 30px; text-decoration: none;"
-             onmouseover="this.style.color='#1DA1F2';"
-             onmouseout="this.style.color='#333';">
-            <i class="fab fa-x"></i>
+              <div style="text-align: center; margin: 20px 0;" class="social-icons">
+                <a href="https://www.twitter.com/GeoSpear_LTD" target="_blank"
+                   style="margin: 0 10px; color: #333; font-size: 30px; text-decoration: none;"
+                   onmouseover="this.style.color='#1DA1F2';"
+                   onmouseout="this.style.color='#333';">
+                  <i class="fab fa-x"></i>
           </a>
-                          <a href="https://www.linkedin.com/company/geospears-ltd/?viewAsMember=true" target="_blank"
+                <a href="https://www.linkedin.com/company/geospears-ltd/?viewAsMember=true" target="_blank"
                style="margin: 0 10px; color: #333; font-size: 30px; text-decoration: none;"
                onmouseover="this.style.color='#0077b5';"
                onmouseout="this.style.color='#333';">
               <i class="fab fa-linkedin-in"></i>
             </a>
-                          <a href="https://whatsapp.com/channel/0029Vb7G4bo5PO14XNvL3G12" target="_blank"
+                <a href="https://whatsapp.com/channel/0029Vb7G4bo5PO14XNvL3G12" target="_blank"
                          style="margin: 0 10px; color: #333; font-size: 30px; text-decoration: none;"
                          onmouseover="this.style.color='#037806';"
                          onmouseout="this.style.color='#333';">
                         <i class="fab fa-whatsapp"></i>
                         </a>
-                      </div>
+              </div>
+
             </div>
         </div>
     </div>
