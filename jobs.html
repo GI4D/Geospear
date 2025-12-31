@@ -1,10 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers at Geospears - Join Our Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header-section {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .header-section p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Jobs Grid Section */
+        .jobs-section {
+            padding: 60px 20px;
+        }
+
+        .no-positions-message {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .no-positions-message h2 {
+            color: #1b5e20;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .no-positions-message p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .no-positions-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .job-location {
+            color: #2e7d32;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-size: 1.8rem;
+            color: #1b5e20;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .job-description {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .job-requirements {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .job-requirements li {
+            padding: 10px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .job-requirements li::before {
+            content: "✓";
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 12px;
+            background: #e8f5e9;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .apply-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .apply-btn:hover {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            transform: scale(1.05);
+        }
+
+        .apply-btn::before {
+            content: "⚡";
+            font-size: 1.2rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-section h6 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #1b5e20;
+            padding: 15px 35px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-btn::before {
+            content: "⚡";
+            font-size: 1.3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+
+            .job-title {
+                font-size: 1.5rem;
+            }
+
+            .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="container">
+            <h1>Join the GeoSpear Ltd Team</h1>
+            <p>Explore the open positions below and apply directly.</p>
+        </div>
+    </div>
+
+    <!-- Jobs Section -->
+    <div class="jobs-section">
+        <div class="container">
+            <div class="no-positions-message">
+                <div class="no-positions-icon">📋</div>
+                <h2>No Open Positions at the Moment</h2>
+                <p>Thank you for your interest in joining the GeoSpear Ltd team! We currently don't have any open positions available.</p>
+                <p>However, we're always growing and looking for talented individuals. Please check back regularly for new opportunities, or submit your resume below and we'll keep it on file for future openings.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+
 
 </body>
 </html>
